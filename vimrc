@@ -16,13 +16,14 @@ set foldcolumn=3
 
 " Plugin utilities
 "Plugin 'tpope/vim-fugitive' " plugin on GitHub repo
-"Plugin 'scrooloose/nerdtree' " file drawer, open with :NERDTreeToggle
+""Plugin 'scrooloose/nerdtree' " file drawer, open with :NERDTreeToggle
 "Plugin 'kien/ctrlp.vim' "fuzzy find files
-"Plugin 'klen/python-mode' "python mode
+""Plugin 'klen/python-mode' "python mode
 "Plugin 'Valloric/YouCompleteMe' "YCM
-"Plugin 'klen/python-mode' "python mode
+""Plugin 'klen/python-mode' "python mode
 "Plugin 'vim-airline/vim-airline' "airline
-"Plugin 'jeffkreeftmeijer/vim-numbertoggle' "number-toggle
+""Plugin 'jeffkreeftmeijer/vim-numbertoggle' "number-toggle
+
 
 " All of your Plugins must be added before the following line
 "call vundle#end()            " required
@@ -47,10 +48,10 @@ let g:gutentags_generate_on_empty_buffer = 0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " bind Ctrl+<movement> keys to move around the windows, instead of using Ctrl+w + <movement>
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-l> <c-w>l
-map <c-h> <c-w>h
+" map <c-j> <c-w>j
+" map <c-k> <c-w>k
+" map <c-l> <c-w>l
+" map <c-h> <c-w>h
 
 " map sort function to a key
 vnoremap <Leader>s :sort<CR>

@@ -1,0 +1,2 @@
+- do not add excessive try except
+- always use uv as python environment manager and use uv run to run python code. Do not set up pyproject.toml for python package, always use minimal package configuration in pyproject.toml unless it is asked.
