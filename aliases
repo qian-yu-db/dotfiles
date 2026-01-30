@@ -22,7 +22,8 @@ alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 
 # short commands
-alias vi='vim'
+alias vi='nvim'
+alias vim='nvim'
 alias gvim="mvim"
 alias h='history -50'
 alias c='clear'
