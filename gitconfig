@@ -61,7 +61,7 @@
 	lineNumber = true
 [core]
 	editor = vim
-	hooksPath = ~/.databricks/githooks
+	hooksPath = /Users/q.yu/.databricks/githooks
 	autocrlf = input
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
