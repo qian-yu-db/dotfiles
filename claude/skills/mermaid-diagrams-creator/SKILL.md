@@ -1,5 +1,5 @@
 ---
-name: mermaid-diagrams
+name: mermaid-diagrams-creator
 description: Create clean, well-structured Mermaid diagrams for flowcharts, sequence diagrams, class diagrams, ER diagrams, state diagrams, and architecture visuals. Use when the user asks to create diagrams, visualize workflows, model systems, document APIs, show data relationships, or generate architecture documentation. Handles syntax nuances, layout optimization, and common pitfalls across all Mermaid diagram types.
 ---
 
