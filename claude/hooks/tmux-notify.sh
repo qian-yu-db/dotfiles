@@ -44,9 +44,15 @@ fi
 # Send macOS notification
 osascript -e "display notification \"$MESSAGE\" with title \"$TITLE\"" 2>/dev/null &
 
-# Play sound if configured
+# Play sound if configured (skip during Zoom/Meet calls, use low volume)
 if [ -n "$SOUND" ] && [ -f "$SOUND" ]; then
-    afplay "$SOUND" &
+    # Detect active video calls — only check Zoom (exact match) since Teams/Meet
+    # always have background processes running even without an active call
+    if pgrep -qx "CptHost"; then
+        : # Zoom is in an active meeting (CptHost = Zoom's meeting process), stay silent
+    else
+        afplay --volume 0.3 "$SOUND" &
+    fi
 fi
 
 exit 0

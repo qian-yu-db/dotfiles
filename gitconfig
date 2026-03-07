@@ -1,3 +1,13 @@
+[user]
+    name = qian-yu-db
+    email = "q.yu@databricks.com"
+[credential "https://github.com"]
+    helper =
+    helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+    helper =
+    helper = !/opt/homebrew/bin/gh auth git-credential
+
 [alias]
 	s = status
 	st = status -sb
@@ -68,3 +78,34 @@
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
+
+# When cloning EMU orgs via SSH, rewrite to use the EMU host alias
+[url "git@github.com-emu:databricks-eng/"]
+  insteadOf = git@github.com:databricks-eng/
+
+[url "git@github.com-emu:databricks-field-eng/"]
+  insteadOf = git@github.com:databricks-field-eng/
+
+# When cloning EMU orgs via HTTPS, convert to SSH with the EMU alias
+[url "git@github.com-emu:databricks-field-eng/"]
+  insteadOf = https://github.com/databricks-field-eng/
+
+[url "git@github.com-emu:databricks-eng/"]
+  insteadOf = https://github.com/databricks-eng/
+
+# gh CLI uses org-id@github.com: format for EMU organizations
+[url "git@github.com-emu:"]
+  insteadOf = org-140212977@github.com:
+
+# Match HTTPS remote URLs for this org
+[includeIf "hasconfig:remote.*.url:https://github.com/databricks-field-eng/**"]
+    path = ~/.gitconfig-databricks-field-eng
+
+# Match SSH remote URLs (after insteadOf rewrite) for this org
+[includeIf "hasconfig:remote.*.url:git@github.com-emu:databricks-field-eng/**"]
+    path = ~/.gitconfig-databricks-field-eng
+
+# All other HTTPS GitHub URLs → SSH with default personal key
+[url "git@github.com:"]
+  insteadOf = https://github.com/
+

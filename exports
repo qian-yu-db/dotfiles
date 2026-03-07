@@ -18,4 +18,5 @@ export HISTCONTROL='ignoreboth';
 # jdk11
 export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
 export JAVA_HOME=$(/usr/libexec/java_home)
-export OPENAI_BASE_URL=https://e2-demo-field-eng.cloud.databricks.com/serving-endpoints
+# Databricks API routing - toggle with claude-corp / claude-max aliases in .zshrc
+# export OPENAI_BASE_URL=https://e2-demo-field-eng.cloud.databricks.com/serving-endpoints

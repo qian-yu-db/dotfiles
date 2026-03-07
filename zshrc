@@ -34,6 +34,8 @@ export PATH="/opt/homebrew/lib/node_modules/.bin:$PATH"
 # Claude Code aliases for quick updates and checks
 alias claude-update='sudo npm update -g @anthropic-ai/claude-code'
 alias claude-check='claude-check-version'
+alias claude-corp='export OPENAI_BASE_URL=https://e2-demo-field-eng.cloud.databricks.com/serving-endpoints && echo "Switched to Databricks corporate API"'
+alias claude-max='unset OPENAI_BASE_URL && echo "Switched to Max plan"'
 
 # Make UV the default pip installer
 #alias pip="uv pip"
@@ -98,3 +100,8 @@ function md() {
 function pdfview() {
   pdftotext "$1" - | less
 }
+alias llm="dbexec repo run llm"
+export I_DANGEROUSLY_OPT_IN_TO_UNSUPPORTED_ALPHA_TOOLS=true
+export MCP_PRIVACY_SUMMARIZATION_ENABLED=false
+export CLOUDSDK_PYTHON=/opt/homebrew/opt/python@3.10/libexec/bin/python3
+export PATH="/opt/homebrew/share/google-cloud-sdk/bin:$PATH"

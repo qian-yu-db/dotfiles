@@ -25,6 +25,7 @@
     ~/.claude/skills: claude/skills
     ~/.claude/agents: claude/agents
     ~/.claude/hooks: claude/hooks
+    ~/.claude/sounds: claude/sounds
 
 - shell:
   #Installing/updating submodules 

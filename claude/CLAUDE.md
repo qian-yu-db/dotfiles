@@ -1,5 +1,6 @@
 ## General Rules
 
+- Always ask for explicit permission before creating, updating, or deleting Google Docs. Show what will be done (create new doc, append to existing, overwrite, etc.) and wait for confirmation.
 - Do not add excessive try except
 - Always use uv as python environment manager and use uv run to run python code. Do not set up pyproject.toml for python package, always use minimal package configuration in pyproject.toml unless it is asked.
 - Always write changes directly to the relevant file rather than presenting them in chat. When asked to update, add, or modify content, write to the file immediately unless explicitly told otherwise.
@@ -28,8 +29,18 @@ When the user starts a task that involves multiple files, deployment, or multi-s
 3. Outline your approach in 3-5 bullet points and wait for confirmation before writing code
 4. If you hit the same error twice, stop and present findings — do not keep iterating on the same approach
 
+## Browser Automation (Claude in Chrome)
+
+- Never call `tabs_context_mcp` with `createIfEmpty: true`. Always call it without that parameter first, then only create tabs with `tabs_create_mcp` if needed. Using `createIfEmpty` opens windows across all Chrome profiles.
+
 ## Claude Code Plugins & Skills
 
 - The plugin format uses marketplace-style plugin.json (not array-based plugins.json).
 - Skill files use markdown without YAML frontmatter (skills use the skill description section pattern).
 - Always verify slash commands appear in a new session before considering a plugin task complete.
+
+## ASQ Notes Configuration
+- ASQ_NOTES_ROOT: ~/workspace/databricks_knowledge_vault
+- CUSTOMERS_DIR: 02-customers/
+- TEMPLATES_DIR: 30-templates/
+- LOGS_DIR: 50-logs/

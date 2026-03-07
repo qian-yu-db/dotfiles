@@ -58,3 +58,6 @@ alias kbl='kubectl logs'
 alias kblf='kubectl logs -f'
 alias kblfc='kubectl -c spark-kubernetes-driver logs -f'
 
+# ssh github
+alias ssh-db='ssh -T git@github.com'
+alias ssh-emu='ssh -T git@github.com-emu'

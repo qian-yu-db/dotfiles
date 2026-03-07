@@ -28,7 +28,7 @@ for f in CLAUDE.md settings.json; do
 done
 
 # Directories
-for d in skills agents commands hooks; do
+for d in skills agents commands hooks sounds; do
     if [[ -d "$SRC/$d" ]]; then
         echo "--- $d/ ---"
         rsync "${RSYNC_OPTS[@]}" "$SRC/$d/" "$DEST/$d/"
